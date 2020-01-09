@@ -1,0 +1,26 @@
+<section>
+
+  <div>
+    <button (click)="shuffleDeck(deck)">Click Me To Shuffle Deck</button>
+  </div>
+  <div *ngFor="let card of deck">
+    <app-card [suit]="card.suit" [value]="card.value"></app-card>
+  </div>
+
+  <div>
+    <button (click)="assignCard()">click</button>
+  </div>
+
+  <h3>Player 1 Cards:</h3>
+  <div *ngFor="let card of player1">
+    <app-card [suit]="card.suit" [value]="card.value"></app-card>
+  </div>
+  <h3>Player 2 Cards:</h3>
+  <div *ngFor="let card of player2">
+    <app-card [suit]="card.suit" [value]="card.value" ></app-card>
+  </div>
+
+
+  <h1>{{ winner }}</h1>
+
+</section>
